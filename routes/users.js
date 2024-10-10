@@ -28,12 +28,7 @@ router.post('/login', (req, res, next) => {
             res.redirect('/users');
         }
         else {
-            if (bcrypt.compareSync(req.body.userPassword, userFound.password)) {
-                goodPassword(req, userFound, res);
-            }
-            else {
-                wrongPassword(req, res);
-            }
+            checkPassword(req, userFound, res);
         }
     }
     else {
@@ -85,6 +80,15 @@ router.post('/add', (req, res, next) => {
 });
 
 module.exports = router;
+
+function checkPassword(req, userFound, res) {
+    if (bcrypt.compareSync(req.body.userPassword, userFound.password)) {
+        goodPassword(req, userFound, res);
+    }
+    else {
+        wrongPassword(req, res);
+    }
+}
 
 function goodPassword(req, userFound, res) {
     console.log("password correct");
