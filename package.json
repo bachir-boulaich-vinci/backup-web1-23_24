@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
-    "better-sqlite3": "^9.4.3",
+    "better-sqlite3": "^9.6.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -28,5 +28,12 @@
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
