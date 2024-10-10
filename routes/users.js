@@ -24,7 +24,7 @@ router.post('/login', (req, res, next) => {
     console.log("User found" + JSON.stringify(userFound));
     if (userFound) {
         if (userFound.active == false) {
-            req.session.errors = "Compte désactivé";
+            req.session.errors = "Compte inactif";
             res.redirect('/users');
         }
         else {
