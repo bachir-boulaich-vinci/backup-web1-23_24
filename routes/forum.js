@@ -17,6 +17,7 @@ router.post('/add', function (req, res, next) {
 });
 
 /* POST like message */
+/* faut modifier ça */
 router.post('/like', function (req, res, next) {
     console.log("LIKE MESSAGE FORUM");
     Message.like(req.body.id);
