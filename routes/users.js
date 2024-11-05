@@ -22,6 +22,7 @@ router.post('/login', (req, res, next) => {
     // User in DB ? -> return the record of the user if found
     const userFound = User.find(req.body.userLogin);
     console.log("User found" + JSON.stringify(userFound));
+    // test
     if (userFound) {
         if (userFound.active == false) {
             req.session.errors = "Compte désactivé";
