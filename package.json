@@ -28,5 +28,10 @@
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^2.0.15"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2015
+    }
   }
 }
